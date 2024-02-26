@@ -1,0 +1,96 @@
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.customSelect {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 45px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+  
+  font-size: 16px;
+  color: #333;
+  border: 2px solid #ccc;
+}
+
+.customSelect select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  
+  font-size: 16px;
+  color: #333;
+}
+
+.customSelect::after {
+  content: "\25BC";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+
+.customSelect:hover {
+  background-color: #e0e0e0;
+}
+
+.customSelect select:focus {
+  outline: none;
+}
+
+.customInput {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  width: 200px;
+  
+  font-size: 16px;
+}
+
+.customInput:focus {
+  outline: none;
+  border-color: #a52838;
+}
+
+.customButton {
+  background-color: #a52838;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px 20px;
+  
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.customButton:hover {
+  background-color: #c42b3f;
+}
+
+.customButton:active {
+  transform: translateY(1px);
+}
+
+@media screen and (max-width: 768px) {
+  .filter {
+    flex-direction: column;
+  }
+  
+}
